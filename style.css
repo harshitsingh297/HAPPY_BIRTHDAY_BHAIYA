@@ -1,0 +1,741 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(
+        135deg,
+        #25052d,
+        #72134f,
+        #35104b,
+        #8d195a
+    );
+    color: white;
+}
+
+
+/* OPENING SCREEN */
+
+#welcomeScreen {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 999;
+
+    background: linear-gradient(
+        135deg,
+        #24052e,
+        #7d1555
+    );
+}
+
+.welcome-content {
+    padding: 30px;
+}
+
+.gift {
+    font-size: 100px;
+
+    animation: giftMove 1.5s infinite;
+}
+
+.welcome-content h1 {
+    margin: 20px 0 10px;
+}
+
+.welcome-content h2 {
+    font-size: 40px;
+}
+
+#openBtn {
+    margin-top: 30px;
+
+    border: none;
+
+    padding: 18px 30px;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    animation: pulse 1.5s infinite;
+}
+
+
+/* MAIN WEBSITE */
+
+#mainWebsite {
+    display: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* HERO */
+
+.hero {
+    padding: 80px 10px 40px;
+}
+
+.top-text {
+    font-size: 20px;
+
+    animation: fadeDown 1.5s ease;
+}
+
+.birthday-text {
+    margin-top: 20px;
+
+    font-size: clamp(55px, 10vw, 120px);
+
+    line-height: 1;
+
+    letter-spacing: 5px;
+
+    animation:
+        glow 2s infinite alternate,
+        zoomIn 1.5s ease;
+}
+
+.birthday-text span {
+    font-size: 0.55em;
+}
+
+#typingText {
+    margin-top: 30px;
+
+    font-size: 20px;
+
+    min-height: 50px;
+}
+
+
+/* MUSIC BUTTON */
+
+.music-btn {
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    margin: 30px;
+
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* REAL CAKE */
+
+.cake-container {
+    margin: 30px auto;
+    position: relative;
+    width: 300px;
+    height: 250px;
+}
+
+.flames {
+    font-size: 35px;
+    position: relative;
+    z-index: 5;
+    animation: flame 0.7s infinite alternate;
+}
+
+.real-cake {
+    width: 260px;
+    height: 140px;
+
+    position: relative;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+
+    transition: 1s ease;
+}
+
+.cake-half {
+    width: 130px;
+    height: 130px;
+
+    background: linear-gradient(
+        to bottom,
+        #ffb6c9 0%,
+        #ff8fab 45%,
+        #d94f70 46%,
+        #d94f70 55%,
+        #ff8fab 56%
+    );
+
+    border: 4px solid white;
+
+    transition: 1s ease;
+}
+
+.left-half {
+    border-radius: 20px 0 0 20px;
+}
+
+.right-half {
+    border-radius: 0 20px 20px 0;
+}
+
+
+/* CREAM */
+
+.cream {
+    position: absolute;
+
+    width: 45px;
+    height: 20px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    top: -10px;
+
+    z-index: 3;
+}
+
+.cream1 {
+    left: 25px;
+}
+
+.cream2 {
+    left: 105px;
+}
+
+.cream3 {
+    right: 25px;
+}
+
+
+/* CAKE CUT ANIMATION */
+
+.real-cake.cut .left-half {
+    transform:
+        translateX(-65px)
+        rotate(-8deg);
+}
+
+.real-cake.cut .right-half {
+    transform:
+        translateX(65px)
+        rotate(8deg);
+}
+
+
+/* CAKE SHAKE BEFORE CUT */
+
+.real-cake.shake {
+    animation: cakeShake 0.5s;
+}
+
+@keyframes cakeShake {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+/* SLIDESHOW */
+
+.gallery-section {
+    margin: 80px 0;
+}
+
+.gallery-section h2 {
+    margin-bottom: 30px;
+
+    font-size: 32px;
+}
+
+.slideshow {
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 400px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.5);
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    animation: photoFade 1s ease;
+}
+
+.photo-count {
+    margin-top: 15px;
+}
+
+
+/* PHOTO GRID */
+
+.photo-grid-section {
+    margin: 80px 0;
+}
+
+.photo-grid-section h2 {
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.4);
+}
+
+.gallery img:hover {
+    transform:
+        scale(1.05)
+        rotate(2deg);
+}
+
+
+/* MESSAGE */
+
+.message-section {
+    margin: 80px 0;
+
+    padding: 50px 25px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+.message-section h2 {
+    margin-bottom: 25px;
+
+    font-size: 30px;
+}
+
+.message-section p {
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* SURPRISE */
+
+.surprise-section {
+    padding: 50px 0 80px;
+}
+
+#surpriseBtn {
+    margin-top: 20px;
+
+    padding: 18px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    animation: pulse 1.5s infinite;
+}
+
+#surpriseBox {
+    display: none;
+
+    margin-top: 40px;
+
+    padding: 40px 20px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff477e,
+            #8b145b
+        );
+
+    animation:
+        surpriseShow 1s ease;
+}
+
+#surpriseBox.show {
+    display: block;
+}
+
+.big-emoji {
+    font-size: 70px;
+
+    animation: bounce 1s infinite;
+}
+
+
+/* BALLOONS */
+
+.balloons {
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.balloon {
+    position: absolute;
+
+    width: 65px;
+    height: 85px;
+
+    border-radius:
+        50% 50% 45% 45%;
+
+    animation:
+        balloonFloat 12s infinite linear;
+}
+
+.balloon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 100px;
+
+    background: white;
+
+    top: 80px;
+
+    left: 50%;
+}
+
+.b1 {
+    left: 5%;
+    bottom: -100px;
+    background: #ff4b7d;
+}
+
+.b2 {
+    left: 20%;
+    bottom: -150px;
+    background: #ffd166;
+    animation-delay: 2s;
+}
+
+.b3 {
+    left: 40%;
+    bottom: -100px;
+    background: #06d6a0;
+    animation-delay: 4s;
+}
+
+.b4 {
+    left: 60%;
+    bottom: -150px;
+    background: #118ab2;
+    animation-delay: 1s;
+}
+
+.b5 {
+    left: 75%;
+    bottom: -100px;
+    background: #ef476f;
+    animation-delay: 3s;
+}
+
+.b6 {
+    left: 90%;
+    bottom: -150px;
+    background: #8338ec;
+    animation-delay: 5s;
+}
+
+
+/* CANVAS */
+
+#confetti,
+#fireworks {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+}
+
+#confetti {
+    z-index: 20;
+}
+
+#fireworks {
+    z-index: 15;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 40px 10px;
+
+    font-size: 18px;
+
+    opacity: 0.8;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes glow {
+
+    from {
+        text-shadow:
+            0 0 10px white,
+            0 0 20px #ff4b7d;
+    }
+
+    to {
+        text-shadow:
+            0 0 30px white,
+            0 0 60px #ffd166,
+            0 0 80px #ff4b7d;
+    }
+}
+
+@keyframes giftMove {
+
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg) scale(1.1);
+    }
+}
+
+@keyframes pulse {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes flame {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes cakeFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes balloonFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    100% {
+        transform:
+            translateY(-120vh)
+            rotate(360deg);
+    }
+}
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes photoFade {
+
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes surpriseShow {
+
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .slideshow {
+        height: 300px;
+    }
+
+    .gallery img {
+        height: 220px;
+    }
+
+    .balloon {
+        width: 45px;
+        height: 60px;
+    }
+
+    .welcome-content h2 {
+        font-size: 30px;
+    }
+}

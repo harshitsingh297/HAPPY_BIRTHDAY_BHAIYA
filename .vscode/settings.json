@@ -1,0 +1,7 @@
+{
+    "livePreview.customExternalBrowser": "Chrome",
+    "livePreview.debugOnExternalPreview": true,
+    "livePreview.hostIP": "10.16.176.198",
+    "livePreview.defaultPreviewPath": "//html",
+    "livePreview.openPreviewTarget": "External Browser"
+}
