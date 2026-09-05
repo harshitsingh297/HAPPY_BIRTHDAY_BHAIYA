@@ -323,11 +323,11 @@ body {
 }
 
 .slideshow img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
+     width: 100%;
+    height: 420px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 20px;
     animation: photoFade 1s ease;
 }
 
@@ -356,12 +356,10 @@ body {
 }
 
 .gallery img {
-    width: 100%;
-
-    height: 250px;
-
-    object-fit: cover;
-
+      width: 100%;
+    height: 420px;
+    object-fit: contain;
+    object-position: center;
     border-radius: 20px;
 
     transition: 0.4s;
